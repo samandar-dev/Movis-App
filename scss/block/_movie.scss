@@ -1,0 +1,392 @@
+.movies {
+  width: 100%;
+  height: auto;
+  background: rgb(255, 255, 255);
+}
+
+.mov__hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  width: 100%;
+  height: 800px;
+}
+
+.carousel-item {
+  padding-top: 20px;
+  margin-top: -70px;
+}
+
+.car-item1 {
+  @include bg-img();
+  background-image: url("/images/hero.png");
+}
+
+.car-item2 {
+  @include bg-img();
+  background-image: url("/images/img1.jpeg");
+}
+
+.car-item3 {
+  @include bg-img();
+  background-image: url("/images/loki.jpg");
+  background-position: center bottom;
+}
+
+.car-btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 100px;
+  height: 100px;
+}
+
+.hero__top {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  z-index: 100;
+}
+
+.hero__search-box {
+  max-width: 525px;
+  height: 35px;
+  border-radius: 6px;
+  border: 2px solid #d1d5db;
+  overflow: hidden;
+  padding-right: 10px;
+}
+
+.hero-top__input {
+  width: 500px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  border: none;
+  outline: none;
+  color: #fff;
+  background: transparent;
+  padding: 6px 10px;
+
+  &::placeholder {
+    color: #fff;
+  }
+}
+
+.hero__icon-search {
+  margin-top: 5px;
+  font-size: 23px;
+  color: #fff;
+  border: none;
+  background: transparent;
+}
+
+.hero-top__menu {
+  width: auto;
+  height: 35px;
+}
+
+.hero-top__menu-tit {
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 0;
+  margin-right: 25px;
+}
+
+.hero-top__menu-btn {
+  background: transparent;
+  border: none;
+}
+
+.hero__desc_box {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: auto;
+  height: auto;
+}
+
+.hero__desc {
+  max-width: 410px;
+  height: auto;
+}
+
+.hero__retn {
+  margin-bottom: 20px;
+}
+
+.hero__title {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.hero__text {
+  height: auto;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #fff;
+}
+
+.hero__btn {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  color: #fff;
+  padding: 6px 14px;
+  background: #be123c;
+  border-radius: 6px;
+  border: none;
+}
+
+.btns__box {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translate(0, -50%);
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__btn-car {
+  width: 15px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+
+  color: #9ca3af;
+  margin-bottom: 12px;
+
+  border: none;
+  background: transparent;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.btnAct {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 14px;
+  color: #fff;
+}
+
+.hero__btn-car::before {
+  content: "";
+  position: absolute;
+  top: 47%;
+  left: -30px;
+  transform: translate(0, -55%);
+  width: 25px;
+  height: 3px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+@media screen and (max-width: 576px) {
+  .hero__search-box {
+    display: none !important;
+  }
+  .hero__title {
+    font-size: 30px;
+  }
+  .hero__text {
+    font-size: 12px;
+  }
+}
+
+// MAIN PART -----------------
+
+.main__inner {
+  padding-top: 70px;
+}
+
+.mov__list_box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.mov__list-box {
+  width: 100%;
+  height: 540px;
+  overflow: hidden;
+  margin-bottom: 70px;
+}
+
+.mov__list {
+  list-style-type: none;
+  width: auto;
+  height: 540px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.mov__item {
+  width: 320px;
+  padding: 30px;
+}
+
+.mitem__box {
+  position: relative;
+  width: 250px;
+  height: 540px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.mitem__img-box {
+  width: 100%;
+  height: 370px;
+  margin-bottom: 10px;
+}
+
+.mitem__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mitem__icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  padding: 5px 7px 1px 7px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(243, 244, 246, 0.5);
+  backdrop-filter: blur(2px);
+
+  &:focus {
+    background: rgba(88, 88, 88, 0.9);
+  }
+}
+
+.mitem__tit {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: #9ca3af;
+  margin-left: 10px;
+  margin-bottom: 12px;
+}
+
+.mitem__title {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #111827;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.mitem__price-icon {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.bxs-star {
+  font-size: 20px;
+  line-height: 12px;
+  color: #ddeb19;
+  margin-right: 5px;
+}
+
+.mitem__rating {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  color: #111827;
+}
+
+.mitem__add-btn {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+  border: none;
+  padding: 3px 5px;
+  color: #fff;
+  background: rgb(105, 103, 103);
+
+  &:focus {
+    background: rgb(73, 72, 72);
+  }
+}
+
+.mov-list__top {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0 30px;
+  margin-bottom: 45px;
+}
+
+.mov-list__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 47px;
+}
+
+.mov-list__btn {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #be123c;
+  border: none;
+  display: flex;
+  align-items: center;
+  background: transparent;
+
+  & .bx {
+    font-size: 28px;
+  }
+}
+
+.mov-list__car-btn {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  font-size: 70px;
+  font-weight: normal;
+  color: #6b7280;
+  border: none;
+  background: transparent;
+}
+
+.mlis__btn1 {
+  left: -50px;
+}
+
+.mlis__btn2 {
+  right: -50px;
+}

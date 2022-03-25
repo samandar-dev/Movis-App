@@ -13,7 +13,6 @@ let modalBtn = document.querySelectorAll('.mitem__add-btn');
 let modalBox = document.querySelector('.modall');
 let modalRemoveBtn = document.querySelector('.modal-remov');
 
-
 let newArr = [];
 let sanoq = 0;
 
@@ -85,7 +84,7 @@ for (let i = n2; i < n2 + 10; i++) {
   movListTwo.appendChild(li);
 }
 
-for (let i = n3; i < n3 + 5; i++) {
+for (let i = n3; i < n3 + 11; i++) {
   let li = document.createElement('li');
   li.className = "mov__item mitem";
   li.innerHTML = `

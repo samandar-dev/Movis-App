@@ -1,14 +1,24 @@
 .movies {
   width: 100%;
-  height: auto;
+  height: 100%;
   background: rgb(255, 255, 255);
 }
 
 .mov__hero {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 80%;
   overflow: hidden;
+}
+
+.hero-lgg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.404));
+  z-index: 2;
 }
 
 .carousel-inner {
@@ -16,9 +26,48 @@
   height: 800px;
 }
 
+.carousel-indicators {
+  position: absolute;
+  top: 50%;
+  left: auto;
+  right: 50px;
+  transform: translate(0, -50%);
+
+  width: 60px;
+  height: 140px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+}
+
 .carousel-item {
   padding-top: 20px;
   margin-top: -70px;
+}
+
+.carousel-indicators [data-bs-target] {
+  position: relative;
+  width: 0px;
+  margin: 12px 0;
+
+  font-size: 20px;
+  font-weight: 700;
+  text-indent: 40px;
+
+  display: flex;
+  align-items: center;
+
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  z-index: 10;
+
+  &.active {
+    width: 27px;
+    height: 4px;
+    font-size: 30px;
+  }
 }
 
 .car-item1 {
@@ -33,16 +82,20 @@
 
 .car-item3 {
   @include bg-img();
-  background-image: url("/images/loki.jpg");
-  background-position: center bottom;
+  background-image: url("/images/hero-img-3.webp");
+  background-position: center top;
 }
 
-.car-btn {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  width: 100px;
-  height: 100px;
+.car-item4 {
+  @include bg-img();
+  background-image: url("/images/hero-img-4.jpeg");
+  background-position: center top;
+}
+
+.car-item5 {
+  @include bg-img();
+  background-image: url("/images/hero-img-5.jpg");
+  background-position: center top;
 }
 
 .hero__top {
@@ -112,6 +165,7 @@
   transform: translate(0, -50%);
   width: auto;
   height: auto;
+  z-index: 100;
 }
 
 .hero__desc {
@@ -136,9 +190,9 @@
 .hero__text {
   height: auto;
   font-family: sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
 
   color: #fff;
 }
@@ -248,7 +302,7 @@
 }
 
 .mov__item {
-  width: 320px;
+  width: 310px;
   padding: 30px;
 }
 
@@ -270,22 +324,34 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .mitem__icon {
   position: absolute;
   top: 10px;
   right: 10px;
+
+  width: 40px;
+  height: 40px;
   color: #fff;
+
   padding: 5px 7px 1px 7px;
   border-radius: 50%;
   border: none;
-  background: rgba(243, 244, 246, 0.5);
-  backdrop-filter: blur(2px);
+  background: rgb(243, 0, 0);
+}
 
-  &:focus {
-    background: rgba(88, 88, 88, 0.9);
-  }
+.m-ite-act::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-54%, -50%);
+  width: 13px;
+  height: 11.5px;
+  border-radius: 2px 2px 15px 15px;
+  background: #fff;
 }
 
 .mitem__tit {
@@ -389,4 +455,99 @@
 
 .mlis__btn2 {
   right: -50px;
+}
+
+.carusel_box {
+  width: 500px;
+  height: 900px;
+  transform: rotateZ(-90deg);
+}
+
+// main con parts
+
+.main__con-box {
+  width: 100%;
+  height: 80px;
+  margin: 10px 0;
+}
+
+.con__box {
+  width: 100%;
+  height: auto;
+  padding: 0 30px;
+}
+
+.con__form {
+  width: 100%;
+  height: auto;
+
+  padding-bottom: 30px;
+  padding-right: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.con__form_input {
+  width: 350px;
+  height: 40px;
+
+  font-size: 22px;
+  font-weight: 500;
+
+  padding: 0 10px;
+  @include form-inputs();
+}
+
+.selec-categor {
+  width: 200px;
+  height: 40px;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  padding: 0px 10px;
+
+  @include form-inputs();
+}
+.selec-years1 {
+  width: 80px;
+  height: 40px;
+
+  padding-left: 5px;
+
+  font-size: 20px;
+  font-weight: 600;
+  @include form-inputs();
+}
+
+.selec-alp {
+  width: 80px;
+  height: 40px;
+
+  padding-left: 5px;
+
+  font-size: 20px;
+  font-weight: 600;
+  @include form-inputs();
+}
+
+.form-search-btn {
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #fff;
+  background: #444;
+  border: 1px solid #000;
+  border-radius: 10px;
+
+  padding: 7px 15px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #fff;
+    background: #666;
+  }
 }

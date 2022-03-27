@@ -17,7 +17,8 @@ carBtnright.forEach((el, index) => {
         movListONe.style.transform = 'translateX(-75%)';
       } else if (count1 == 4) {
         movListONe.style.transform = 'translateX(-100%)';
-      } else {
+      }
+      else {
         movListONe.style.transform = 'translateX(0)';
         count1 = 0
       }
@@ -35,7 +36,8 @@ carBtnright.forEach((el, index) => {
         movListTwo.style.transform = 'translateX(-75%)';
       } else if (count2 == 4) {
         movListTwo.style.transform = 'translateX(-100%)';
-      } else {
+      }
+      else {
         movListTwo.style.transform = 'translateX(0)';
         count2 = 0
       }
@@ -53,7 +55,8 @@ carBtnright.forEach((el, index) => {
         movListThre.style.transform = 'translateX(-75%)';
       } else if (count3 == 4) {
         movListThre.style.transform = 'translateX(-100%)';
-      } else {
+      }
+      else {
         movListThre.style.transform = 'translateX(0)';
         count3 = 0
       }
@@ -73,7 +76,8 @@ carBtnleft.forEach((el, index) => {
         movListONe.style.transform = 'translateX(-50%)';
       } else if (count1 == 4) {
         movListONe.style.transform = 'translateX(-75%)';
-      } else {
+      }
+      else {
         movListONe.style.transform = 'translateX(0)';
         count1 = 0
       }
@@ -91,7 +95,8 @@ carBtnleft.forEach((el, index) => {
         movListTwo.style.transform = 'translateX(-50%)';
       } else if (count2 == 4) {
         movListTwo.style.transform = 'translateX(-75%)';
-      } else {
+      }
+      else {
         movListTwo.style.transform = 'translateX(0)';
         count2 = 0
       }
@@ -109,7 +114,8 @@ carBtnleft.forEach((el, index) => {
         movListThre.style.transform = 'translateX(-50%)';
       } else if (count3 == 4) {
         movListThre.style.transform = 'translateX(-75%)';
-      } else {
+      }
+      else {
         movListThre.style.transform = 'translateX(0)';
         count3 = 0
       }

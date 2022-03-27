@@ -17,225 +17,340 @@
   <section class="movies mov">
     <div class="mov__inner">
       <div class="mov__hero hero overflow-hidden">
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="container">
-              <div class="hero__top d-flex align-items-center justify-content-between">
-                <div class="mov__logo-box me-3">
-                  <a class="text-decoration-none" href="#">
-                    <img src="images/logo.svg" alt="logo">
-                  </a>
-                </div>
+        <div class="hero__carusel-box">
+          <div id="carouselExampleIndicators" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="carousel-indicators">
+                <button type="button car-btn-act" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                  class="active" aria-current="true" aria-label="Slide 1">1
+                </button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  aria-label="Slide 2">2
+                </button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  aria-label="Slide 3">3
+                </button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                  aria-label="Slide 4">4
+                </button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                  aria-label="Slide 5">5
+                </button>
+              </div>
+              <div class="container">
+                <div class="hero__top d-flex align-items-center justify-content-between">
+                  <div class="mov__logo-box me-3">
+                    <a class="text-decoration-none" href="#">
+                      <img src="images/logo.svg" alt="logo">
+                    </a>
+                  </div>
 
-                <div class="hero__search-box my-3 d-flex align-items-center">
-                  <input class="hero-top__input" type="text" name="text" id="text"
-                    placeholder="What do you want to watch?">
-                  <button class="hero__icon-search">
-                    <i class='bx bx-search'></i>
-                  </button>
-                </div>
+                  <div class="hero__search-box my-3 d-flex align-items-center">
+                    <input class="hero-top__input" type="text" name="text" id="text"
+                      placeholder="What do you want to watch?">
+                    <button class="hero__icon-search">
+                      <i class='bx bx-search'></i>
+                    </button>
+                  </div>
 
-                <div class="hero-top__menu ms-3 d-flex align-items-center">
-                  <button class="hero-top__menu-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                    aria-controls="offcanvasRight">
-                    <img src="images/hero-iconn.svg" alt="icon">
-                  </button>
-                  <div class="offcanvas offcanvas-end offcan" tabindex="-1" id="offcanvasRight"
-                    aria-labelledby="offcanvasRightLabel">
-                    <div class="offcanvas-header">
-                      <h5 id="offcanvasRightLabel">Offcanvas right</h5>
-                      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                      <div class="hero__search-box my-3 d-flex align-items-center">
-                        <input class="hero-top__input border-dark text-black" type="text" name="text" id="text"
-                          placeholder="What do you want to watch?">
-                        <span class=" hero__icon-search text-black">
-                          <i class='bx bx-search'></i>
-                        </span>
+                  <div class="hero-top__menu ms-3 d-flex align-items-center">
+                    <button class="hero-top__menu-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                      aria-controls="offcanvasRight">
+                      <img src="images/hero-iconn.svg" alt="icon">
+                    </button>
+
+                    <div class="offcanvas offcanvas-end offcan" tabindex="-1" id="offcanvasRight"
+                      aria-labelledby="offcanvasRightLabel">
+                      <div class="offcanvas-header">
+                        <h5 id="offcanvasRightLabel">My movies</h5>
+
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                          aria-label="Close">
+                        </button>
+                      </div>
+
+                      <div class="offcanvas-body">
+                        <div class="my-off-box my">
+                          <ul class="my__list"></ul>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="carousel-item car-item1 active">
-              <div class="container">
-                <div class="hero__desc_box">
-                  <div class="hero__desc">
-                    <h2 class="hero__title">John Wick 3 : <br> Parabellum</h2>
+              <div class="carousel-item car-item1 active">
+                <div class="hero-lgg"></div>
+                <div class="container">
+                  <div class="hero__desc_box">
+                    <div class="hero__desc">
+                      <h2 class="hero__title">John Wick 3 : <br> Parabellum</h2>
 
-                    <div class="mitem__price hero__retn">
-                      <img src="images/imd.svg" alt="img">
-                      <span class="mitem__price-icon"><i class='bx bxs-star'></i></span>
-                      <span class="mitem__rating text-white">88%</span>
+                      <div class="mitem__price hero__retn">
+                        <img src="images/imd.svg" alt="img">
+                        <span class="mitem__price-icon"><i class='bx bxs-star'></i></span>
+                        <span class="mitem__rating text-white">88%</span>
+                      </div>
+
+                      <p class="hero__text">
+                        John Wick is on the run after killing a member of
+                        the international assassins' guild, and with a $14
+                        million price tag on his head, he is the target
+                        of hit men and women everywhere.
+                      </p>
+
+                      <button class="hero__btn d-flex align-items-center">
+                        <img class="icon_btn me-2" src="images/icon.svg" alt="icon">Watch trailer
+                      </button>
                     </div>
+                  </div>
+                </div>
+              </div>
 
-                    <p class="hero__text">
-                      John Wick is on the run after killing a member of
-                      the international assassins' guild, and with a $14
-                      million price tag on his head, he is the target
-                      of hit men and women everywhere.
-                    </p>
+              <div class="carousel-item car-item2">
+                <div class="hero-lgg"></div>
+                <div class="container">
+                  <div class="hero__desc_box">
+                    <div class="hero__desc">
+                      <h2 class="hero__title">Money Heist</h2>
 
-                    <button class="hero__btn d-flex align-items-center">
-                      <img class="icon_btn me-2" src="images/icon.svg" alt="icon">Watch trailer
-                    </button>
+                      <div class="mitem__price hero__retn">
+                        <img src="images/imd.svg" alt="img">
+                        <span class="mitem__price-icon"><i class='bx bxs-star'></i></span>
+                        <span class="mitem__rating text-white">100%</span>
+                      </div>
+
+                      <p class="hero__text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto soluta delectus illo fugit
+                        incidunt, id vel optio molestias omnis sed natus a ullam voluptatem asperiores magni maiores
+                        molestiae ex quisquam illum rem quod veritatis, expedita blanditiis! Repellendus animi veniam
+                        sed?
+                      </p>
+
+                      <button class="hero__btn d-flex align-items-center">
+                        <img class="icon_btn me-2" src="images/icon.svg" alt="icon">Watch trailer
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item car-item3">
+                <div class="hero-lgg"></div>
+                <div class="container">
+                  <div class="hero__desc_box">
+                    <div class="hero__desc">
+                      <h2 class="hero__title">Loki</h2>
+
+                      <div class="mitem__price hero__retn">
+                        <img src="images/imd.svg" alt="img">
+                        <span class="mitem__price-icon"><i class='bx bxs-star'></i></span>
+                        <span class="mitem__rating text-white">98%</span>
+                      </div>
+
+                      <p class="hero__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officia
+                        perferendis quaerat, recusandae et illum fuga harum asperiores sint quia suscipit explicabo
+                        dolores, optio vitae dignissimos voluptate!
+                      </p>
+
+                      <button class="hero__btn d-flex align-items-center">
+                        <img class="icon_btn me-2" src="images/icon.svg" alt="icon">Watch trailer
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item car-item4">
+                <div class="hero-lgg"></div>
+                <div class="container">
+                  <div class="hero__desc_box">
+                    <div class="hero__desc">
+                      <h2 class="hero__title">BAD GUYS</h2>
+
+                      <div class="mitem__price hero__retn">
+                        <img src="images/imd.svg" alt="img">
+                        <span class="mitem__price-icon"><i class='bx bxs-star'></i></span>
+                        <span class="mitem__rating text-white">98%</span>
+                      </div>
+
+                      <p class="hero__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officia suscipit explicabo
+                        dolores, optio vitae dignissimos voluptate!
+                      </p>
+
+                      <button class="hero__btn d-flex align-items-center">
+                        <img class="icon_btn me-2" src="images/icon.svg" alt="icon">Watch trailer
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item car-item5">
+                <div class="hero-lgg"></div>
+                <div class="container">
+                  <div class="hero__desc_box">
+                    <div class="hero__desc">
+                      <h2 class="hero__title">Loraks</h2>
+
+                      <div class="mitem__price hero__retn">
+                        <img src="images/imd.svg" alt="img">
+                        <span class="mitem__price-icon"><i class='bx bxs-star'></i></span>
+                        <span class="mitem__rating text-white">98%</span>
+                      </div>
+
+                      <p class="hero__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officia
+                        perferendis dignissimos voluptate!
+                      </p>
+
+                      <button class="hero__btn d-flex align-items-center">
+                        <img class="icon_btn me-2" src="images/icon.svg" alt="icon">Watch trailer
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div class="carousel-item car-item2">
-              <div class="container">
-                <div class="hero__desc_box">
-                  <div class="hero__desc">
-                    <h2 class="hero__title">Money Heist</h2>
-
-                    <div class="mitem__price hero__retn">
-                      <img src="images/imd.svg" alt="img">
-                      <span class="mitem__price-icon"><i class='bx bxs-star'></i></span>
-                      <span class="mitem__rating text-white">100%</span>
-                    </div>
-
-                    <p class="hero__text">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto soluta delectus illo fugit
-                      incidunt, id vel optio molestias omnis sed natus a ullam voluptatem asperiores magni maiores
-                      molestiae ex quisquam illum rem quod veritatis, expedita blanditiis! Repellendus animi veniam sed?
-                    </p>
-
-                    <button class="hero__btn d-flex align-items-center">
-                      <img class="icon_btn me-2" src="images/icon.svg" alt="icon">Watch trailer
-                    </button>
-                  </div>
+      <div class="hero_search_box he-box">
+        <div class="container">
+          <div class="he-box__inner">
+            <button class="he-box__remBtn">Back</button>
+            <ul class="he-box__list" id="he-box-list"></ul>
+            <div class="he-box__btns">
+              <div class="he-box__ov">
+                <div class="he-box__w">
+                  <button class="h-btn" id="prev-btn">1</button>
+                  <button class="h-btn ">2</button>
+                  <button class="h-btn" id="next-btn">3</button>
+                  <button class="h-btn">4</button>
+                  <button class="h-btn">5</button>
+                  <button class="h-btn">6</button>
+                  <button class="h-btn">7</button>
+                  <button class="h-btn">8</button>
+                  <button class="h-btn">9</button>
+                  <button class="h-btn">10</button>
+                  <button class="h-btn">11</button>
+                  <button class="h-btn">12</button>
+                  <button class="h-btn">13</button>
+                  <button class="h-btn">14</button>
+                  <button class="h-btn">15</button>
+                  <button class="h-btn">16</button>
+                  <button class="h-btn">17</button>
+                  <button class="h-btn">18</button>
+                  <button class="h-btn">19</button>
                 </div>
               </div>
+
+              <span class="point-span">. . .</span>
+              <button class="h-btn" id="end-btn">20</button>
             </div>
-
-            <div class="carousel-item car-item3">
-              <div class="container">
-                <div class="hero__desc_box">
-                  <div class="hero__desc">
-                    <h2 class="hero__title">Loki</h2>
-
-                    <div class="mitem__price hero__retn">
-                      <img src="images/imd.svg" alt="img">
-                      <span class="mitem__price-icon"><i class='bx bxs-star'></i></span>
-                      <span class="mitem__rating text-white">98%</span>
-                    </div>
-
-                    <p class="hero__text">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste officia
-                      perferendis quaerat, recusandae et illum fuga harum asperiores sint quia suscipit explicabo
-                      dolores, optio vitae dignissimos voluptate!
-                    </p>
-
-                    <button class="hero__btn d-flex align-items-center">
-                      <img class="icon_btn me-2" src="images/icon.svg" alt="icon">Watch trailer
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <button class="carousel-control-prev car-btn" type="button" data-bs-target="#carouselExampleFade"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next car-btn" type="button" data-bs-target="#carouselExampleFade"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+
   <main class="main">
     <div class="main__inner">
       <div class="container">
+        <div class="main__con-box con">
+          <div class="con__box">
+            <div class="con__form">
+              <input class="con__form_input" type="text" name="text" id="form-search" placeholder="Search...">
+            </div>
+          </div>
+        </div>
+
         <div class="mov__list_box">
           <div class="mov-list__top d-flex align-items-center justify-content-between">
             <h3 class="mov-list__title">Featured Movie</h3>
-            <button class="mov-list__btn">See more <i class='bx bx-chevron-right'></i></button>
+            <button class="mov-list__btn">See more
+              <i class='bx bx-chevron-right'></i>
+            </button>
           </div>
-          <button class="mov-list__car-btn mlis__btn1"><i class='bx bx-chevron-left'></i></button>
+
+          <button class="mov-list__car-btn mlis__btn1">
+            <i class='bx bx-chevron-left'></i>
+          </button>
+
           <div class="mov__list-box">
             <ul class="mov__list w-100 h-auto d-flex align-items-center" id="movListOne"></ul>
           </div>
 
-          <button class="mov-list__car-btn mlis__btn2"><i class='bx bx-chevron-right'></i></button>
+          <button class="mov-list__car-btn mlis__btn2">
+            <i class='bx bx-chevron-right'></i>
+          </button>
         </div>
 
         <div class="mov__list_box">
           <div class="mov-list__top d-flex align-items-center justify-content-between">
             <h3 class="mov-list__title">New Arrival</h3>
-            <button class="mov-list__btn">See more <i class='bx bx-chevron-right'></i></button>
+            <button class="mov-list__btn">See more
+              <i class='bx bx-chevron-right'></i>
+            </button>
           </div>
-          <button class="mov-list__car-btn mlis__btn1"><i class='bx bx-chevron-left'></i></button>
+
+          <button class="mov-list__car-btn mlis__btn1">
+            <i class='bx bx-chevron-left'></i>
+          </button>
+
           <div class="mov__list-box">
             <ul class="mov__list w-100 h-auto d-flex align-items-center" id="movListTwo"></ul>
           </div>
 
-          <button class="mov-list__car-btn mlis__btn2"><i class='bx bx-chevron-right'></i></button>
+          <button class="mov-list__car-btn mlis__btn2">
+            <i class='bx bx-chevron-right'></i>
+          </button>
         </div>
 
         <div class="mov__list_box">
           <div class="mov-list__top d-flex align-items-center justify-content-between">
             <h3 class="mov-list__title">Exclusive Videos</h3>
-            <button class="mov-list__btn">See more <i class='bx bx-chevron-right'></i></button>
+            <button class="mov-list__btn">See more
+              <i class='bx bx-chevron-right'></i>
+            </button>
           </div>
-          <button class="mov-list__car-btn mlis__btn1"><i class='bx bx-chevron-left'></i></button>
+
+          <button class="mov-list__car-btn mlis__btn1">
+            <i class='bx bx-chevron-left'></i>
+          </button>
+
           <div class="mov__list-box">
             <ul class="mov__list w-100 h-auto d-flex align-items-center" id="movListThre"></ul>
           </div>
 
-          <button class="mov-list__car-btn mlis__btn2"><i class='bx bx-chevron-right'></i></button>
+          <button class="mov-list__car-btn mlis__btn2">
+            <i class='bx bx-chevron-right'></i>
+          </button>
         </div>
       </div>
     </div>
   </main>
 
 
-  <div class="modall">
-    <div class="modal__inner d-flex">
-      <button class="modal-remov">x</button>
-      <div class="modal__img-box">
-        <h3 class="modal__title">John Wick 3 : Parabellum</h3>
-        <img class="modal__img" src="images/hero.png" alt="img">
-      </div>
-      <div class="modal__desc">
-        <div class="modal__cont mb-3 d-flex justify-content-between ">
-          <div class="mitem__price hero__retn">
-            <img src="images/imd.svg" alt="img" width="60">
-            <span class="mitem__price-icon ms-5"><i class='bx bxs-star fs-4'></i></span>
-            <span class="mitem__rating fs-5 fw-bold">88%</span>
-          </div>
+  <div class="modall"></div>
 
-          <button class="modal__icon">
-            <i class='bx bx-heart'></i>
-          </button>
-        </div>
-        <p class="modal__text">
-          John Wick is on the run after killing a member of
-          the international assassins' guild, and with a $14
-          million price tag on his head, he is the target
-          of hit men and women everywhere.
-        </p>
-      </div>
-    </div>
+  <div class="modal__ifrem">
+    <button class="ifrem__remov-btn" id="ifrem-remov">x</button>
   </div>
 
   <script src="bootstrap-5.1.3-dist/js/bootstrap.js"></script>
   <script src="js/normalized-movies.js"></script>
-  <!-- <script src="js/modal.js"></script> -->
+  <script src="js/variables.js"></script>
   <script src="js/carusel.js"></script>
+  <script src="js/ifrem.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/my-movies.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/_next-privious.js"></script>
+  <script src="js/hero-search.js"></script>
+  <script src="js/main-search.js"></script>
 </body>
 
 </html>

@@ -5,3 +5,12 @@
   background-size: cover;
   background-position: center;
 }
+
+@mixin form-inputs {
+  outline: none;
+  border: none;
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 10px;
+  margin-right: 30px;
+}

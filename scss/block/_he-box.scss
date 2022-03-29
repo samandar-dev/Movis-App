@@ -1,12 +1,15 @@
 .hero_search_box {
   position: absolute;
   top: 0;
-  width: 100%;
-  height: auto;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 70%;
+  height: 70%;
   background: rgb(216, 216, 216);
   z-index: 220;
+  border-radius: 0 0 20px 20px;
   overflow: hidden;
-  display: none;
+  // display: none;
 }
 
 .box-none {
@@ -28,11 +31,13 @@
 .he-box__list {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 540px;
 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  overflow-y: scroll;
+  // margin-right: -30px;
 
   background: rgb(255, 255, 255);
   list-style-type: none;

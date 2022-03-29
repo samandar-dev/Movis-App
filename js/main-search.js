@@ -1,168 +1,86 @@
-let formArr = []
+
+const selecCategor = document.querySelector('#selec-categor');
+const selecYear1 = document.querySelectorAll('#selec-years1');
+
+const formSearchBtn = document.querySelector('.form-search-btn');
+
+const mainSearchBox = document.querySelector('.main__search-boxx');
+const mainSearchList = document.querySelector('.msearch__list');
+const mainSearchCloseBtn = document.querySelector('.msearch-close-btn');
+const mainSearchText = document.querySelector('.msearch__text');
+const movListBox = document.querySelectorAll('.mov__list_box');
 
 formInput.addEventListener('keyup', formFunc);
+// selecCategor.addEventListener('click', formFunc);
+// selecYear1.addEventListener('click', formFunc);
 
-let selecCAt = document.createElement('select');
-selecCAt.className = "selec-categor";
-selecCAt.innerHTML = `  
-          <option value="All">All</option>
-          <option value="Family">Family</option>
-          <option value="Acction">Acctionl</option>
-          <option value="Acction">Camedia</option>
-`;
-
-let selecY1 = document.createElement('select');
-selecY1.className = "selec-years1";
-selecY1.innerHTML = `  
-          <option value="1990">1990</option>
-          <option value="1991">1991</option>
-          <option value="1992">1992</option>
-`;
-
-let selecY2 = document.createElement('select');
-selecY2.className = "selec-years1";
-selecY2.innerHTML = `  
-          <option value="2000">2000</option>
-          <option value="20001">20001</option>
-          <option value="20002">20002</option>
-`;
-
-let selecAlp = document.createElement('select');
-selecAlp.className = "selec-alp";
-selecAlp.innerHTML = `  
-          <option value="A-Z">A-Z</option>
-          <option value="W-M">W-M</option>
-          <option value="B-D">B-D</option>
-`;
-
-let f_btn = document.createElement('button');
-f_btn.className = "form-search-btn";
-f_btn.textContent = 'Search';
-
-FormBox.appendChild(selecCAt);
-FormBox.appendChild(selecY1);
-FormBox.appendChild(selecY2);
-FormBox.appendChild(selecAlp);
-FormBox.appendChild(f_btn);
-
+let formArr = []
 
 function formFunc() {
-  f_btn.addEventListener('click', () => {
+  formSearchBtn.addEventListener('click', formFunc)
 
-    let inputValue = formInput.value;
-    let itemsLi = movListONe.getElementsByTagName('li');
-    for (let i = 0; i < movies.length; i++) {
-      let movTitle = movies[i].title;
-      itemsLi.className = 'd-none'
+  movListBox.forEach((items) => {
+    items.classList.add('d-none');
+  })
 
-      if (movTitle.toLocaleLowerCase().indexOf(inputValue) != -1) {
-        console.log('yesssss');
-        console.log(movTitle);
-        // console.log(itemsLi);
-        // itemsLi.className = "mov__item mitem d-flex"
-        // let sli = document.createElement('li');
-        // sli.className = "mov__item mitem";
-        // sli.innerHTML = `
-        //           <div class="mitem__box">
-        //             <div class="mitem__img-box">
-        //               <a class="text-decoration-none" href="https://www.netflix.com/uz-ru/">
-        //                 <img class="mitem__img" src="${movies[i].youtubePoster}" alt="imgs">
-        //               </a>
-        //               <button class="mitem__icon">
-        //                 <i class='bx bx-heart'></i>
-        //               </button>
-        //             </div>
-        //             <p class="mitem__tit">${movies[i].language}, ${movies[i].year} - Current</p>
-        //             <h3 class="mitem__title">${movies[i].title}</h3>
-        //             <div class="mitem__price_box">
-        //               <div class="mitem__price d-flex align-items-center justify-content-between">
-        //                 <div class="mitem__price-box">
-        //                   <span class="mitem__price-icon">
-        //                     <i class='bx bxs-star'></i>
-        //                   </span>
-        //                   <span class="mitem__rating">${movies[i].imdbRating}</span>
-        //                 </div>
-        //                 <button class="mitem__add-btn mb-3" modalFun(${movies[i].imdbId})>More info</button>
-        //               </div>
-        //               <p class="mitem__janr mitem__tit">${movies[i].categories}</p>
-        //             </div>
-        //           </div>`;
-        // movListONe.appendChild(sli);
-      } else {
-        console.log('No');
-        itemsLi.className = 'd-none'
-      }
+  mainSearchBox.classList.remove('d-none');
+  mainSearchList.innerHTML = ''
+
+  let inputValueMain = formInput.value.toLocaleLowerCase();
+  // let categorss = selecCategor.value;
+  // let years =
+  let lisNull = true
+
+  movies.forEach((item) => {
+    let movTitle = item.title;
+    let li = document.createElement('li');
+    li.className = "mov__item mitem";
+
+    if (movTitle.toLocaleLowerCase().indexOf(inputValueMain) != -1 && formInput.value.length >= 1) {
+      console.log(selecYear1.value);
+      console.log('yesssss');
+      li.innerHTML = `
+              <div class="mitem__box">
+                <div class="mitem__img-box">
+                  <img class="mitem__img" src="${item.youtubePoster}" alt="imgs" id='${item.imdbId}'>
+                  <button class="mitem__icon" id="${item.imdbId}">
+                    <i class='bx bx-heart'></i>
+                  </button>
+                </div>
+                <p class="mitem__tit">${item.language}, ${item.year} - Current</p>
+                <h3 class="mitem__title">${item.title}</h3>
+                <div class="mitem__price_box">
+                  <div class="mitem__price d-flex align-items-center justify-content-between">
+                    <div class="mitem__price-box">
+                      <span class="mitem__price-icon">
+                        <i class='bx bxs-star'></i>
+                      </span>
+                      <span class="mitem__rating">${item.imdbRating}</span>
+                    </div>
+                  </div>
+                  <p class="mitem__janr mitem__tit">${item.categories}</p>
+                </div>
+              </div>`;
+
+      mainSearchList.appendChild(li);
+      lisNull = false
+    }
+    else {
+      console.log('No');
     }
   })
+
+  if (lisNull == true && formInput.value.length >= 1) {
+    mainSearchText.classList.remove('d-none');
+  } else {
+    mainSearchText.classList.add('d-none');
+  }
+
+  mainSearchCloseBtn.addEventListener('click', () => {
+    movListBox.forEach((items) => {
+      items.classList.remove('d-none');
+    })
+    mainSearchBox.classList.add('d-none');
+    mainSearchList.innerHTML = ''
+  })
 }
-
-// for (let i = n1, j = n2; i < n1 + 10, j < n2 + 10; i++, j++) {
-//   let li = document.createElement('li');
-//   li.className = "mov__item mitem";
-//   li.innerHTML = `
-//             <div class="mitem__box">
-//               <div class="mitem__img-box">
-//                 <a class="text-decoration-none" href="https://www.netflix.com/uz-ru/">
-//                   <img class="mitem__img" src="${movies[i].youtubePoster}" alt="imgs">
-//                 </a>
-//                 <button class="mitem__icon">
-//                   <i class='bx bx-heart'></i>
-//                 </button>
-//               </div>
-//               <p class="mitem__tit">${movies[i].language}, ${movies[i].year} - Current</p>
-//               <h3 class="mitem__title">${movies[i].title}</h3>
-//               <div class="mitem__price_box">
-//                 <div class="mitem__price d-flex align-items-center justify-content-between">
-//                   <div class="mitem__price-box">
-//                     <span class="mitem__price-icon">
-//                       <i class='bx bxs-star'></i>
-//                     </span>
-//                     <span class="mitem__rating">${movies[i].imdbRating}</span>
-//                   </div>
-//                   <button class="mitem__add-btn mb-3" modalFun(${movies[i].imdbId})>More info</button>
-//                 </div>
-//                 <p class="mitem__janr mitem__tit">${movies[i].categories}</p>
-//               </div>
-//             </div>`;
-//   movListONe.appendChild(li);
-// }
-
-
-// function formFunc() {
-//   f_btn.addEventListener('click', () => {
-//     console.log(formInput.value);
-//     let n = 1;
-//     let title = []
-//     let tit = []
-//     formArr = movies.forEach((el, i) => {
-//       if (n == 1) {
-//         n++
-//         tit = el.title[i]
-//         if (el.title[0].toLowerCase() == formInput.value) {
-//           console.log('Yes');
-//           console.log(el.title);
-//           console.log(tit);
-//         } else {
-//           console.log('NO');
-//           console.log(el.title);
-//         }
-//       }
-//     })
-//   })
-// }
-
-// function formFunc() {
-//   f_btn.addEventListener('click', () => {
-//     console.log(formInput.value);
-//     let n = 1;
-
-//     formArr = movies.forEach((el) => {
-//       if (formInput.value == el.title && n == 1) {
-//         n++
-//         console.log('Yes');
-//       } else {
-//         console.log('No');
-//       }
-//     })
-//   })
-// }

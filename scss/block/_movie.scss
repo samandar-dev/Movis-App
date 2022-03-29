@@ -275,7 +275,14 @@
 // MAIN PART -----------------
 
 .main__inner {
+  position: relative;
   padding-top: 70px;
+}
+
+.main__content-box {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
 .mov__list_box {
@@ -550,4 +557,53 @@
     color: #fff;
     background: #666;
   }
+}
+
+// MAIN SEARCH BOX
+
+.main__search-boxx {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  min-height: 550px;
+
+  padding: 10px 0;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(224, 224, 224);
+}
+
+.msearch__list {
+  width: 100%;
+  height: auto;
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.msearch-close-btn {
+  width: 70px;
+  height: 30px;
+  margin-left: 91%;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 10px;
+  background: #555;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #333;
+  }
+}
+
+.msearch__text {
+  font-size: 35px;
+  font-weight: 700;
+
+  color: #be123c;
+  padding-left: 30px;
+  text-align: center;
 }

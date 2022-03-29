@@ -1,18 +1,20 @@
 const myList = document.querySelector('.my__list');
 let mItemBtn = document.querySelectorAll('.mitem__icon');
-let myCou = 0;
+let myCou = 1;
 let myArr = ['1']
 
 function myMoviesFun() {
   mItemBtn.forEach((el) => {
-    el.addEventListener('click', () => {
-      let idd = el.id
-      myArr.push(idd);
-      for (let i = 0; i < movies.length; i++) {
-        let myLi = document.createElement('li');
-        myLi.className = "my__item";
-        if (idd == movies[i].imdbId) {
-          myLi.innerHTML = `
+    if (myCou == 1) {
+      el.addEventListener('click', () => {
+        myCou = 2
+        let idd = el.id
+        myArr.push(idd);
+        for (let i = 0; i < movies.length; i++) {
+          let myLi = document.createElement('li');
+          myLi.className = "my__item";
+          if (idd == movies[i].imdbId) {
+            myLi.innerHTML = `
             <div class="my__img-box">
             <img class="my__img" src="${movies[i].youtubePoster}" alt="imgs" id='${movies[i].imdbId}'>
               <button class="mitem__icon m-ite-act" id="${movies[i].imdbId}">
@@ -33,19 +35,19 @@ function myMoviesFun() {
                   <p class="my__janr my__tit">${movies[i].categories}</p>
                   </div>`;
 
-          for (let j = 0; j < myArr.length; j++) {
-            if (myArr[j] != idd) {
-              el.classList.add('m-ite-act')
-              myList.appendChild(myLi);
-              console.log(myArr);
-              console.log(myArr[j]);
-              console.log(idd);
+            for (let j = 0; j < myArr.length; j++) {
+              if (myArr[j] != idd) {
+                el.classList.add('m-ite-act')
+                myList.appendChild(myLi);
+                console.log(myArr);
+                console.log(myArr[j]);
+                console.log(idd);
+              }
             }
           }
         }
-      }
-    })
+      })
+    }
   })
 }
 myMoviesFun();
-modalFun();

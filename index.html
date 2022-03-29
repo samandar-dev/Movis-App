@@ -221,6 +221,7 @@
           <div class="he-box__inner">
             <button class="he-box__remBtn">Back</button>
             <ul class="he-box__list" id="he-box-list"></ul>
+            <p class="hsearch__text d-none">There is no such movie</p>
             <div class="he-box__btns">
               <div class="he-box__ov">
                 <div class="he-box__w">
@@ -262,7 +263,30 @@
         <div class="main__con-box con">
           <div class="con__box">
             <div class="con__form">
-              <input class="con__form_input" type="text" name="text" id="form-search" placeholder="Search...">
+              <input class="con__form_input" type="text" name="text" id="form-search" placeholder="Search..." required>
+
+              <select class="selec-categor" id="selec-categor">
+                <option value="All">All</option>
+                <option value="Family">Family</option>
+                <option value="Acction">Acctionl</option>
+                <option value="Acction">Camedia</option>
+              </select>
+
+              <select class="selec-years1" id="selec-years1">
+                <option value="1990">1990</option>
+                <option value="1991">1991</option>
+                <option value="1992">2018</option>
+                <option value="1992">2017</option>
+                <option value="1992">2006</option>
+              </select>
+
+              <select class="selec-years1" id="selec-years2">
+                <option value="2000">2000</option>
+                <option value="20001">20001</option>
+                <option value="20002">20002</option>
+              </select>
+
+              <button class="form-search-btn">Search</button>
             </div>
           </div>
         </div>
@@ -330,6 +354,14 @@
           </button>
         </div>
       </div>
+
+      <div class="main__search-boxx d-none msearch">
+        <div class="container">
+          <button class="msearch-close-btn">x</button>
+          <ul class="msearch__list row align-items-center"></ul>
+          <p class="msearch__text d-none">There is no such movie</p>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -346,11 +378,11 @@
   <script src="js/carusel.js"></script>
   <script src="js/ifrem.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/my-movies.js"></script>
-  <script src="js/modal.js"></script>
   <script src="js/_next-privious.js"></script>
   <script src="js/hero-search.js"></script>
   <script src="js/main-search.js"></script>
+  <script src="js/my-movies.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 
 </html>

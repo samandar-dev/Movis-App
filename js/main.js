@@ -37,9 +37,6 @@ function addItems() {
     else if (i <= n1 + 30) {
       movListThre.appendChild(li);
     }
-    else if (i <= n1 + 47) {
-      heList.appendChild(li);
-    }
   }
 }
 addItems();

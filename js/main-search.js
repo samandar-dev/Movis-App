@@ -11,9 +11,10 @@ const mainSearchText = document.querySelector('.msearch__text');
 const movListBox = document.querySelectorAll('.mov__list_box');
 
 formInput.addEventListener('keyup', formFunc);
+// selecCategor.addEventListener('click', formFunc);
+// selecYear1.addEventListener('click', formFunc);
 
 // let formArr = []
-// let formCat = []
 
 function formFunc() {
   formSearchBtn.addEventListener('click', () => {
@@ -27,16 +28,16 @@ function formFunc() {
     mainSearchList.innerHTML = ''
 
     let inputValueMain = formInput.value.toLocaleLowerCase();
-    // let categorss = selecCategor.value;
+    let categorss = selecCategor.value;
+    // let years =
     let lisNull = true
-
 
     movies.forEach((item) => {
       let movTitle = item.title;
       let li = document.createElement('li');
       li.className = "mov__item mitem";
 
-      if (movTitle.toLocaleLowerCase().indexOf(inputValueMain) != -1 && formInput.value.length >= 1 && selecCategor.value == 'All') {
+      if (movTitle.toLocaleLowerCase().indexOf(inputValueMain) != -1 && formInput.value.length >= 1 && categorss == 'All') {
         console.log(selecYear1.value);
         console.log('yesssss');
         li.innerHTML = `
